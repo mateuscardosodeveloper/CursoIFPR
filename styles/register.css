@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #EBEBEB;
+    font-family: 'Nunito';
+}
+
+#area-principal{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#area-register{
+    width: 1120px;
+    height: 80%;
+    padding: 21px;
+    background-color: white;
+    background-color: 5px;
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
+
+input[type=text], input[type=password], input[type=email], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 9px 0;
+    display: inline-block;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+    font-size: 1.1em;
+}
+
+input[type=date]{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #EBEBEB;
+    font-size: 1.1em;
+
+}
+
+input[type=file]{
+    margin: 8px 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+#foto-register{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#foto-register img{
+    width: 140px;
+    height: 140px;
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0 auto;
+}
+
+#image{
+    display: none;
+}
+
+button{
+    background-color: #744ECD;
+    color: white;
+    border: none;
+    margin: 8px 0;
+    width: 190px;
+    height: 45px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#date-button{
+    display: flex;
+    position: relative;
+}

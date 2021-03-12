@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nunito';
+    background-color: #FFFFFF;
+}
+a{
+    text-decoration: none;
+}
+#header{
+    background-color: #8257E5;
+}
+.head{
+    padding: 10px;
+    padding-right: 20-x;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+#logo{
+    text-align: center;
+}
+#logo img{
+    width: 208px;
+    height: 62px;
+}
+#menu{
+    padding-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+#menu a{
+    padding: 0 15px;
+    color: white;
+}
+#menu img{
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+#perfil{
+    text-align: right;
+    font-size: 18px;
+    padding-top: 15px;
+}
+#perfil img{
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+}
+.branco{
+    color: white;
+}
