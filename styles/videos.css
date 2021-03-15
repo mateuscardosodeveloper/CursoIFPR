@@ -64,36 +64,25 @@ select{
     max-height: 510px;
 }
 
-.conteudo{
-    margin-left: 24px;
+#videos{
     margin: 0 auto;
-    margin-top: 10px;
-    width: 1140px;
-    height: 90px;
-    border: 1px solid #ABABAB;
-    border-radius: 5px;
-    display: flex;
-    padding: 10px;
+    width: 1160px;
 }
 
-.homework-quant{
-    padding: 10px;
-    background-color: #04D361;
-    color: white;
-    width: 170px;
-}
-.content{
-    width: 800px;
+.video{
+    border: 1px solid black;
+    width: 360px;
+    height: 200px;
+    display: inline-flex;
+    margin: 10px;
 }
 
-.preto{
+#videos a{
+    text-decoration: none;
     color: black;
 }
 
-.date{
-    margin-left: 170px;
-}
+.text-video{
+    margin: auto 0 10px 10px;
 
-.situation{
-    color: red;
 }

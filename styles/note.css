@@ -44,12 +44,13 @@ button:hover{
 }
 
 .select{
-    margin-left: 24px;
+    margin: 0 auto;
+    text-align: center;
     margin-top: 10px;
 }
 
 select{
-    width: 360px;
+    width: 200px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -60,40 +61,18 @@ select{
 }
 
 .scroll{
+    display: grid;
+    grid-template-columns: auto auto auto;
     overflow-y: auto;
     max-height: 510px;
 }
 
-.conteudo{
-    margin-left: 24px;
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 1140px;
-    height: 90px;
-    border: 1px solid #ABABAB;
-    border-radius: 5px;
-    display: flex;
-    padding: 10px;
+.pdf{
+    text-align: center;
+    margin: 20px;
 }
 
-.homework-quant{
-    padding: 10px;
-    background-color: #04D361;
-    color: white;
-    width: 170px;
-}
-.content{
-    width: 800px;
-}
-
-.preto{
-    color: black;
-}
-
-.date{
-    margin-left: 170px;
-}
-
-.situation{
-    color: red;
+.pdf img{
+    width: 100px;
+    height: 100px;
 }

@@ -64,16 +64,43 @@ select{
     max-height: 510px;
 }
 
+#videos{
+    margin: 0 auto;
+    width: 1160px;
+}
+
+.video{
+    border: 1px solid black;
+    width: 360px;
+    height: 200px;
+    display: inline-flex;
+    margin: 10px;
+}
+
+#videos a{
+    text-decoration: none;
+    color: black;
+}
+
+.text-video{
+    margin: auto 0 10px 10px;
+
+}
+
 .conteudo{
     margin-left: 24px;
-    margin: 0 auto;
     margin-top: 10px;
-    width: 1140px;
-    height: 90px;
+    width: 760px;
     border: 1px solid #ABABAB;
     border-radius: 5px;
     display: flex;
     padding: 10px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.description {
+    padding: 5px 0;
 }
 
 .homework-quant{
@@ -82,18 +109,22 @@ select{
     color: white;
     width: 170px;
 }
-.content{
-    width: 800px;
-}
 
-.preto{
-    color: black;
+.content{
+    width: 700px;
+    height: auto;
 }
 
 .date{
-    margin-left: 170px;
+    font-size: 0.85em;
+    max-width: 190px;
 }
 
 .situation{
     color: red;
+}
+
+.linha{
+    display: grid;
+    grid-template-columns: auto auto;
 }

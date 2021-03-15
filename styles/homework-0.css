@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#principal{
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+#botao{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#quadrado{
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    width: 1230px;
+    max-height: 610px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+}
+.scroll{
+    overflow-y: scroll;
+    max-height: 510px;
+}
+
+.roxo{
+    background-color: #613CB6;
+}
+
+button {
+	background-color: #04D361;
+	color: white;
+	padding: 16px 0;
+	margin: 25px 30px;
+	border: none;
+	cursor: pointer;
+	width: 262px;
+    height: 111px;
+	font-size: 1.8em;
+	border-radius: 5px;
+  }
+button:hover {
+    opacity: 0.8;
+}
+
+/*      ESPECÍFICO       */
+
+#esquerda{
+    width: 860px;
+
+    max-height: 480px;
+    margin: 15px;
+}
+#direita{
+    margin: 0 auto;
+
+    max-height: 480px;
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+}
+#direita img{
+    width: 27px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+}
+.voltar{
+    font-size: 20px;
+    color: #10A8FD;
+}
+#title{
+    padding-left: 10px;
+}
+#desc{
+    padding-left: 20px;
+}
+.archive{
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+    width: 300px;
+    margin: 20px 0 10px 10px;
+    padding: 10px;
+}
+.archive img{
+    vertical-align: middle;
+}
+#file{
+    margin: 0 auto;
+}
+.botao{
+    background-color: #04D361;
+	color: white;
+	padding: 16px 0;
+	border: none;
+	cursor: pointer;
+	width: 250px;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+#borda{
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    margin: 10px;
+}
+
+input[type=file]{
+    width: 250px;
+}
+
+#date{
+    margin: 10px;
+}
+#format{
+    margin-top: 100px;
+}
+#situation{
+    color: red;
+}
