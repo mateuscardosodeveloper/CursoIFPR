@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registre-se</title>
     <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../styles/partials/modal.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
@@ -53,7 +54,7 @@
                     <label for="image">
                         <img id="image-user" src="../images/registerfoto.png" alt="">
                     </label>
-                    <input type="file" id="image" name="image">
+                    <input type="file" id="image" name="image" onchange="loadFile(event)" >
                 </div>
                 <div>
                     <label for="name">Nome Completo:</label>
@@ -90,6 +91,25 @@
                 </div>
             </div>
         </form>
+        <div id="modal" class="hide">
+            <div id="content">
+                <img src="../images/check.png">
+                <h1>Cadastro Concluído</h1>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        function loadFile(event){
+            var reader = new FileReader()
+            reader.onload = () => {
+                var image = document.getElementById('image-user')
+                image.src = reader.result
+            }
+            reader.readAsDataURL(event.target.files[0])
+        }
+
+    </script>
 </body>
 </html>
