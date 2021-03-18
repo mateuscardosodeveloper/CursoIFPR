@@ -1,0 +1,4 @@
+express
+ejs
+body-parser
+-g nodemon
