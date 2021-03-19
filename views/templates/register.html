@@ -1,115 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registre-se</title>
-    <link rel="stylesheet" href="../styles/register.css">
-    <link rel="stylesheet" href="../styles/partials/modal.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="area-cabecalho">
-        <div id="area-logo">
-            <a href="main.html"><img id="iflogo" src="../images/logo.png" alt=""></a>
+    {% extends "templates/layout.html" %}
 
+    {% block title %}
+        <title>Registre-se</title>
+    {% endblock title%}
+
+    {% block styles %}
+        <link rel="stylesheet" href="../styles/register.css">
+        <link rel="stylesheet" href="../styles/partials/modal.css">
+        <link rel="stylesheet" href="../styles/header.css">
+    {% endblock styles %}
+
+
+    {% block header %}
+        <div id="area-cabecalho">
+            <div id="area-logo">
+                <a href="main.html"><img id="iflogo" src="../images/logo.png" alt=""></a>
+
+            </div>
         </div>
-    </div>
-
-    <div id="area-menu">
-        <div class="botao-menu">
-            <img src="../images/if.webp" alt=""><a href="">Home</a>
+        <div id="area-menu">
+            <div class="botao-menu">
+                <img src="../images/if.webp" alt=""><a href="">Home</a>
+            </div>
+            <div class="botao-menu">
+                <img src="../images/mega fone.png" alt=""><a href="">Extra aula</a>
+            </div>
+            <div class="botao-menu">
+                <img src="../images/calendar.png" alt=""><a href="">Calendário</a>
+            </div>
+            <div class="botao-menu">
+                <img id="boletim" src="../images/boletim.png" alt=""><a href="">Boletim</a>
+            </div>
         </div>
-        <div class="botao-menu">
-            <img src="../images/mega fone.png" alt=""><a href="">Extra aula</a>
-        </div>
-        <div class="botao-menu">
-            <img src="../images/calendar.png" alt=""><a href="">Calendário</a>
-        </div>
-        <div class="botao-menu">
-            <img id="boletim" src="../images/boletim.png" alt=""><a href="">Boletim</a>
-        </div>
-    </div>
-    <div id="area-principal">
-        <form method="POST">
-            <div id="area-register">
-                <div>
-                    <label for="uname">Usuário:</label>
-                    <input type="text" name="uname">
+    {% endblock header %}
 
-                    <label for="email">E-mail:</label>
-                    <input type="text" name="email" id="email">
+    {% block principal %}
+        <div id="area-principal">
+            <form method="POST" enctype="multipart/form-data">
+                <div id="area-register">
+                    <div>
+                        <label for="uname">Usuário:</label>
+                        <input type="text" name="uname">
 
-                    <label for="senha">Senha</label>
-                    <input type="text" name="senha">
+                        <label for="email">E-mail:</label>
+                        <input type="text" name="email" id="email">
 
-                    <label for="senhaC">Confirme sua senha:</label>
-                    <input type="text" name="senhaC">
-                </div>
-                <div id="foto-register">
-                    <span>Adicionar foto de perfil:</span>
-                    <label for="image">
-                        <img id="image-user" src="../images/registerfoto.png" alt="">
-                    </label>
-                    <input type="file" id="image" name="image" onchange="loadFile(event)" >
-                </div>
-                <div>
-                    <label for="name">Nome Completo:</label>
-                    <input type="text" name="name">
+                        <label for="senha">Senha</label>
+                        <input type="text" name="senha">
 
-                    <label for="ra">Numero de R.A:</label>
-                    <input type="text" name="ra">
+                        <label for="senhaC">Confirme sua senha:</label>
+                        <input type="text" name="senhaC">
+                    </div>
+                    <div id="foto-register">
+                        <span>Adicionar foto de perfil:</span>
+                        <label for="image">
+                            <img id="image-user" src="../images/registerfoto.png" alt="">
+                        </label>
+                        <input type="file" id="image" name="image" onchange="loadFile(event)" >
+                    </div>
+                    <div>
+                        <label for="name">Nome Completo:</label>
+                        <input type="text" name="name">
 
-                    <label for="class">Selecione sua turma:</label>
+                        <label for="ra">Numero de R.A:</label>
+                        <input type="text" name="ra">
 
-                    <select name="class" id="class">
-                        <option value="0">4° Mecatrônica</option>
-                        <option value="1">3° Mecatrônica</option>
-                        <option value="2">2° Mecatrônica</option>
-                        <option value="2">2° Mecatrônica</option>
-                        <option value="3">1° Mecatrônica</option>
-                        <option value="4">4° Informática</option>
-                        <option value="5">3° Informática</option>
-                        <option value="6">2° Informática</option>
-                        <option value="7">1° Informática</option>
-                        <option value="8">4° Agroindústria</option>
-                        <option value="9">3° Agroindústria</option>
-                        <option value="10">2° Agroindústria</option>
-                        <option value="11">1° Agroindústria</option>
-                    </select>
+                        <label for="class">Selecione sua turma:</label>
 
-                    <div id="date-button">
-                        <div>
-                            <label for="">Data de nascimento</label><br>
-                            <input type="date" id="date"><br>
+                        <select name="class" id="class">
+                            <option value="0">4° Mecatrônica</option>
+                            <option value="1">3° Mecatrônica</option>
+                            <option value="2">2° Mecatrônica</option>
+                            <option value="2">2° Mecatrônica</option>
+                            <option value="3">1° Mecatrônica</option>
+                            <option value="4">4° Informática</option>
+                            <option value="5">3° Informática</option>
+                            <option value="6">2° Informática</option>
+                            <option value="7">1° Informática</option>
+                            <option value="8">4° Agroindústria</option>
+                            <option value="9">3° Agroindústria</option>
+                            <option value="10">2° Agroindústria</option>
+                            <option value="11">1° Agroindústria</option>
+                        </select>
+
+                        <div id="date-button">
+                            <div>
+                                <label for="">Data de nascimento</label><br>
+                                <input type="date" id="date"><br>
+                            </div>
+                            <button type="submit" id="submit">Registrar</button>
                         </div>
-                        <button type="submit" id="submit">Registrar</button>
                     </div>
                 </div>
-            </div>
-        </form>
-        <div id="modal" class="hide">
-            <div id="content">
-                <img src="../images/check.png">
-                <h1>Cadastro Concluído</h1>
-            </div>
+            </form>
+
+            {% if register %}
+                <div id="modal">
+                    <div id="content">
+                        <img src="../images/check.png">
+                        <h1>Cadastro Concluído</h1>
+                    </div>
+                </div>       
+            {% endif %}
+
         </div>
+    {% endblock principal %}
 
-    </div>
-
-    <script>
-        function loadFile(event){
-            var reader = new FileReader()
-            reader.onload = () => {
-                var image = document.getElementById('image-user')
-                image.src = reader.result
+    {% block scripts%}
+        <script>
+            function loadFile(event){
+                var reader = new FileReader()
+                reader.onload = () => {
+                    var image = document.getElementById('image-user')
+                    image.src = reader.result
+                }
+                reader.readAsDataURL(event.target.files[0])
             }
-            reader.readAsDataURL(event.target.files[0])
-        }
 
-    </script>
-</body>
-</html>
+        </script>
+    {% endblock scripts %}

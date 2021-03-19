@@ -1,6 +1,9 @@
 const express = require('express')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
+const nunjucks = require('nunjucks')
+const router = express.Router()
+
 
 const app = express()
 
@@ -9,30 +12,24 @@ app.engine('html', ejs.renderFile)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
 
-
-app.get('/', (req, res) => {
-    res.render('templates/main.html')
+nunjucks.configure('views', {
+    express: app,
+    noCache: true
 })
 
-app.get('/registro', (req, res) =>{
-    res.render('templates/register.html')
-})
+const loginRoute = require('./routes/login')
+const registerRoute = require('./routes/register')
+const homeworkRoute = require('./routes/homework')
+const videosRoute = require('./routes/videos')
+const subjectsRoute = require('./routes/subjects')
+const noteRoute = require('./routes/note')
 
-app.get('/tarefas', (req, res) =>{
-    res.render('templates/homework.html')
-})
-
-app.get('/videos', (req, res) =>{
-    res.render('templates/videos.html')
-})
-
-app.get('/materias', (req, res) =>{
-    res.render('templates/subjects.html')
-})
-
-app.get('/conceitos', (req, res) =>{
-    res.render('templates/note.html')
-})
+app.use('/', loginRoute)
+app.use('/register', registerRoute)
+app.use('/tarefas', homeworkRoute)
+app.use('/videos', videosRoute)
+app.use('/materias', subjectsRoute)
+app.use('/conceitos', noteRoute)
 
 
 

@@ -1,71 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IF -CLASSROOM</title>
-    <link rel="stylesheet" href="../styles/homework.css">
-    <link rel="stylesheet" href="../styles/painel.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="header">
-        <div class="head">
-            <div id="logo">
-                <a href="">
-                    <img src="../images/logo.png" alt="">
-                </a>
-            </div>
-            <div id="menu">
-                <a href=""><img src="../images/if.webp" alt=""> Home</a>
-                <a href=""><img src="../images/mega fone.png" alt=""> Extra Aula</a>
-                <a href=""><img src="../images/calendar.png" alt=""> Calendário</a>
-                <a href=""><img src="../images/boletim.png" alt=""> Boletim</a>
-            </div>
-            <div id="perfil">
-                <span id="nome" class="branco">Gustavo Borges </span>|<span class="branco"></span><span class="branco" id="turma"> 4° Mecatrônica </span>
-                <img src="../images/registerfoto.png" alt="">
+    {%extends "templates/layout.html" %}
+
+    {% block title %}
+        <title>IF -CLASSROOM</title>
+    {% endblock title%}
+
+    {% block styles%}
+        <link rel="stylesheet" href="../styles/homework.css">
+        <link rel="stylesheet" href="../styles/painel.css">
+    {% endblock styles%}
+
+    {% block header %}
+        <div id="header">
+            <div class="head">
+                <div id="logo">
+                    <a href="">
+                        <img src="../images/logo.png" alt="">
+                    </a>
+                </div>
+                <div id="menu">
+                    <a href=""><img src="../images/if.webp" alt=""> Home</a>
+                    <a href=""><img src="../images/mega fone.png" alt=""> Extra Aula</a>
+                    <a href=""><img src="../images/calendar.png" alt=""> Calendário</a>
+                    <a href=""><img src="../images/boletim.png" alt=""> Boletim</a>
+                </div>
+                <div id="perfil">
+                    <span id="nome" class="branco">Gustavo Borges </span>|<span class="branco"></span><span class="branco" id="turma"> 4° Mecatrônica </span>
+                    <img src="../images/registerfoto.png" alt="">
+                </div>
             </div>
         </div>
-    </div>
-    <div id="principal">
-        <div id="botao">
-            <a href="homework.html"><button class="roxo">Tarefas</button></a>
-            <a href="videos.html"><button>Vídeos</button></a>
-            <a href="subjects.html"><button>Matérias</button></a>
-            <a href="note.html"><button>Conceitos</button></a>
-        </div>
-        <div id="quadrado">
-            <div class="select">
-                <p>Classificar por:</p>
-                <select name="" id="">
-                    <option value="">Não entregues primeiro</option>
-                    <option value="">Concluidas</option>
-                    <option value="">Mais antigas</option>
-                    <option value="">Menor tempo para a entrega</option>
-                </select>
+    {% endblock header %}
+
+    {% block principal %}
+        <div id="principal">
+            <div id="botao">
+                <a href="/tarefas"><button class="roxo">Tarefas</button></a>
+                <a href="/videos"><button>Vídeos</button></a>
+                <a href="/materias"><button>Matérias</button></a>
+                <a href="/conceitos"><button>Conceitos</button></a>
             </div>
-            <div class="scroll">
-                <div class="conteudo">
-                    <div id="content" class="content">
-                        <a class="preto" href="homework-0.html"><u><h3 id="homework-title-0" class="homework-title">Robotica e sistemas embarcados - Prof. Gilson Kanashiro</h3></u>
-                        <h4 id="homework-desc-0" class="homework-desc">3° Trismestre - Atividade 02 - Threads e funções em C++/C, binarios e hexadecimais</h4></a>
-                        <div id="homework-quant-0" class="homework-quant">
-                            03 materias em anexo
+            <div id="quadrado">
+                <div class="select">
+                    <p>Classificar por:</p>
+                    <select name="" id="">
+                        <option value="">Não entregues primeiro</option>
+                        <option value="">Concluidas</option>
+                        <option value="">Mais antigas</option>
+                        <option value="">Menor tempo para a entrega</option>
+                    </select>
+                </div>
+                <div class="scroll">
+                    <div class="conteudo">
+                        <div id="content" class="content">
+                            <a class="preto" href="homework-0.html"><u><h3 id="homework-title-0" class="homework-title">Robotica e sistemas embarcados - Prof. Gilson Kanashiro</h3></u>
+                            <h4 id="homework-desc-0" class="homework-desc">3° Trismestre - Atividade 02 - Threads e funções em C++/C, binarios e hexadecimais</h4></a>
+                            <div id="homework-quant-0" class="homework-quant">
+                                03 materias em anexo
+                            </div>
+                        </div>
+                        <div id="date" class="date">
+                            <b><p id="send-date-0">Data de envio: 01/02/2021</p>
+                                <p id="delivery-date-0">Data de entrega: 10/02/2021</p>
+                                Situação: <span id="situation-0" class="situation">Não entregues</span>
+                            </b>
                         </div>
                     </div>
-                    <div id="date" class="date">
-                        <b><p id="send-date-0">Data de envio: 01/02/2021</p>
-                            <p id="delivery-date-0">Data de entrega: 10/02/2021</p>
-                            Situação: <span id="situation-0" class="situation">Não entregues</span>
-                        </b>
-                    </div>
-                </div>
-            </div>           
+                </div>           
+            </div>
         </div>
-    </div>
-    
-</body>
-</html>
+    {% endblock principal %}

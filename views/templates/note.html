@@ -1,60 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IF -CLASSROOM</title>
+    {% extends "templates/layout.html" %}
+
+    {% block title %}
+        <title>IF -CLASSROOM</title>
+    {% endblock title %}
+
+    {% block styles %}
     <link rel="stylesheet" href="../styles/note.css">
     <link rel="stylesheet" href="../styles/painel.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="header">
-        <div class="head">
-            <div id="logo">
-                <a href="">
-                    <img src="../images/logo.png" alt="">
-                </a>
-            </div>
-            <div id="menu">
-                <a href=""><img src="../images/if.webp" alt=""> Home</a>
-                <a href=""><img src="../images/mega fone.png" alt=""> Extra Aula</a>
-                <a href=""><img src="../images/calendar.png" alt=""> Calendário</a>
-                <a href=""><img src="../images/boletim.png" alt=""> Boletim</a>
-            </div>
-            <div id="perfil">
-                <span id="nome" class="branco">Gustavo Borges </span>|<span class="branco"></span><span class="branco" id="turma"> 4° Mecatrônica </span>
-                <img src="../images/registerfoto.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div id="principal">
-        <div id="botao">
-            <a href="homework.html"><button>Tarefas</button></a>
-            <a href="videos.html"><button>Vídeos</button></a>
-            <a href="subjects.html"><button>Matérias</button></a>
-            <a href="note.html"><button class="roxo">Conceitos</button></a>
-        </div>
-        <div id="quadrado">
-            <div class="select">
-                <p>Classificar por:</p>
-                <select name="" id="">
-                    <option value="">Matemática</option>
-                    <option value="">História</option>
-                    <option value="">Gegrafia</option>
-                    <option value="">Inglês</option>
-                </select>
-            </div>
-            <div class="scroll">
-                <div id="pdf-0" class="pdf">
-                    <h2 id="bloco-0">Bloco I</h2>
-                    <a href=""><img src="../images/icon-pdf.png" alt=""></a>
+    {% endblock styles %}
+
+    {% block header %}
+        <div id="header">
+            <div class="head">
+                <div id="logo">
+                    <a href="">
+                        <img src="../images/logo.png" alt="">
+                    </a>
+                </div>
+                <div id="menu">
+                    <a href=""><img src="../images/if.webp" alt=""> Home</a>
+                    <a href=""><img src="../images/mega fone.png" alt=""> Extra Aula</a>
+                    <a href=""><img src="../images/calendar.png" alt=""> Calendário</a>
+                    <a href=""><img src="../images/boletim.png" alt=""> Boletim</a>
+                </div>
+                <div id="perfil">
+                    <span id="nome" class="branco">Gustavo Borges </span>|<span class="branco"></span><span class="branco" id="turma"> 4° Mecatrônica </span>
+                    <img src="../images/registerfoto.png" alt="">
                 </div>
             </div>
         </div>
-    </div>
-    
-</body>
-</html>
+    {% endblock header %}
+
+    {% block principal %}
+        <div id="principal">
+            <div id="botao">
+                <a href="/tarefas"><button>Tarefas</button></a>
+                <a href="/videos"><button>Vídeos</button></a>
+                <a href="/materias"><button>Matérias</button></a>
+                <a href="/conceitos"><button class="roxo">Conceitos</button></a>
+            </div>
+            <div id="quadrado">
+                <div class="select">
+                    <p>Classificar por:</p>
+                    <select name="" id="">
+                        <option value="">Matemática</option>
+                        <option value="">História</option>
+                        <option value="">Gegrafia</option>
+                        <option value="">Inglês</option>
+                    </select>
+                </div>
+                <div class="scroll">
+                    <div id="pdf-0" class="pdf">
+                        <h2 id="bloco-0">Bloco I</h2>
+                        <a href=""><img src="../images/icon-pdf.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock principal %}
