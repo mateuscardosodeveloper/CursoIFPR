@@ -45,30 +45,26 @@
                 <div class="grid">
                     <div id="esquerda">
                         <div id="title">
-                            <a href="homework.html" class="voltar"><img src="../images/arrow.png" alt=""> <b>Voltar às
+                            <a href="/tarefas" class="voltar"><img src="../images/arrow.png" alt=""> <b>Voltar às
                                     Tarefas</b></a>
 
-                            <h2 id="name-homework">Atividade X - Threads e funções em C++/C, binários e hexadecimais</h2>
-                            <p id="subject-homework">Robótica e sistemas embarcados - Prof. Gilson Kanashiro </p>
+                            <h2 id="name-homework">{{ homework.title}}</h2>
+                            <p id="subject-homework"> {{homework.subject_name }} - {{homework.name}} </p>
                         </div>
                         <div id="desc">
                             <h3 id="description-homework">
-                                Descrição da atividade: Faça os exercícios pedidos no arquivo em anexo, após fazer a lógica
-                                do programa, monte um esquema no Tinkercad com os componentes indicados no exercício e teste
-                                seu código, tire print do sistema funcionando e envie junto ao código no arquivo nomeado
-                                “Arquivo para devolver”.
+                                {{ homework.description }}
                             </h3>
                         </div>
                         <div class="grid">
                             <a href="">
-                                <div class="archive"><img src="../images/mini-pdf.png" alt=""><b>Atividade 02 - Exercícios -
-                                        4</b></div>
+                                <div class="archive"><img src="../images/mini-pdf.png" alt=""><b> {{ homework.archives }} </b></div>
                             </a>
                         </div>
                     </div>
                     <div id="direita">
                         <div id="date">
-                            <p>Data de envio: 01/01/2021 <br>Data de entrega: 10/02/2021</p>
+                            <p>Data de envio: {{homework.created_at}} <br>Data de entrega: {{homework.delivery_date}} </p>
                             <p>Situação: <span id="situation">Não entregue</span></p>
                         </div>
                         <div id="file">

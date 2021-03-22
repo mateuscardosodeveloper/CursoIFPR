@@ -29,6 +29,18 @@ button{
 button:hover{
     opacity: 0.8;
 }
+
+button#filter{
+    background-color: #046fd3;
+    width: 190px;
+    height: 48px;
+    margin: 8px 0;
+    font-size: 1.2em;
+    padding: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
 .roxo{
     background-color: #613CB6;
 }

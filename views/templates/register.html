@@ -14,13 +14,13 @@
     {% block header %}
         <div id="area-cabecalho">
             <div id="area-logo">
-                <a href="main.html"><img id="iflogo" src="../images/logo.png" alt=""></a>
+                <a href="/"><img id="iflogo" src="../images/logo.png" alt=""></a>
 
             </div>
         </div>
         <div id="area-menu">
             <div class="botao-menu">
-                <img src="../images/if.webp" alt=""><a href="">Home</a>
+                <img src="../images/if.webp" alt=""><a href="/">Home</a>
             </div>
             <div class="botao-menu">
                 <img src="../images/mega fone.png" alt=""><a href="">Extra aula</a>
@@ -68,19 +68,12 @@
                         <label for="class">Selecione sua turma:</label>
 
                         <select name="class" id="class">
-                            <option value="0">4° Mecatrônica</option>
-                            <option value="1">3° Mecatrônica</option>
-                            <option value="2">2° Mecatrônica</option>
-                            <option value="2">2° Mecatrônica</option>
-                            <option value="3">1° Mecatrônica</option>
-                            <option value="4">4° Informática</option>
-                            <option value="5">3° Informática</option>
-                            <option value="6">2° Informática</option>
-                            <option value="7">1° Informática</option>
-                            <option value="8">4° Agroindústria</option>
-                            <option value="9">3° Agroindústria</option>
-                            <option value="10">2° Agroindústria</option>
-                            <option value="11">1° Agroindústria</option>
+                            <option selected disabled id="fake">Selecione sua turma</option>
+
+                            {% for classroom in classrooms %}
+                                <option value="{{ classroom.classroom_id}}">{{classroom.classroom_name}}</option>
+                            {% endfor %}
+
                         </select>
 
                         <div id="date-button">

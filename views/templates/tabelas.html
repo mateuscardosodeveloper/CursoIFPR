@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/tabelas.css">
+    <link rel="stylesheet" href="../styles/partials/modal.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <form method="POST" id="users" action="database/users" enctype="multipart/form-data">
+        <h2>Usuário</h2>
+        <input type="text" name="login" id="login" placeholder="login">
+        <input type="text" name="email" id="email" placeholder="email">
+        <input type="text" name="password" id="password" placeholder="password">
+        <input type="text" name="name" id="name" placeholder="name">
+        <input type="date" name="birthday" id="birthday" placeholder="birthday">
+        
+        <select name="classroom_id" id="class"  onmousedown="document.querySelector('#fake').remove()">
+            <option selected disabled id="fake">Selecione uma turma</option>
+
+            {% for class in classrooms %}
+                
+                <option value="{{ class.classroom_id }}">{{ class.classroom_name }}</option>
+
+            {% endfor %}
+
+        </select>
+
+        <input type="text" name="ra" id="ra" placeholder="RA">
+        <input type="file" name="image" id="image">
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <form id="classrooms" method="POST" action="database/classrooms">
+        <h2>Turmas</h2>
+        <input type="text" name="classroom_name" id="name" placeholder="classroom_name">
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <form method="POST" id="homeworks" action="database/homeworks" enctype="multipart/form-data">
+        <h2>Tarefas</h2>
+        
+        <select name="classroom_id" id="class"  onmousedown="document.querySelector('#fakeee').remove()">
+            <option selected disabled id="fakeee">Selecione uma turma</option>
+
+            {% for class in classrooms %}
+                
+                <option value="{{ class.classroom_id }}">{{ class.classroom_name }}</option>
+
+            {% endfor %}
+
+        </select>
+
+        
+        <select name="subject_id" id="class"  onmousedown="document.querySelector('#fakeee').remove()">
+            <option selected disabled id="fakeee">Selecione uma turma</option>
+
+            {% for sub in subjects %}
+                
+                <option value="{{ sub.subject_id }}">{{ sub.subject_name }}</option>
+
+            {% endfor %}
+
+        </select>
+
+        <input type="text" id="title" name="title" placeholder="title">
+        <textarea type="text" id="description" name="description" placeholder="description"></textarea>
+        <input type="file" name="archives" id="archives">
+        <input type="text" id="teacher_id" name="teacher_id" placeholder="teacher_id">
+        <input type="date" id="delivery_date" name="delivery_date" placeholder="delivery_date">
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <form method="POST" id="subjects" action="database/subjects">
+        <h2>Materias</h2>
+        <input type="text" id="name" name="name" placeholder="name">
+        
+        <select name="classroom_id" id="class"  onmousedown="document.querySelector('#fakee').remove()">
+            <option selected disabled id="fakee">Selecione uma turma</option>
+
+            {% for class in classrooms  %}
+                
+                <option value="{{ class.classroom_id }}">{{ class.classroom_name }}</option>
+
+            {% endfor %}
+
+        </select>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if saved %}
+        <div id="modal">
+            <div class="content">
+                <img src="../images/check.png" alt="Cadastro concluído">
+                <h1>Cadastro concluído</h1>
+            </div>
+        </div>
+        
+        <script>
+            setTimeout(() => { 
+                window.location = "/database"; 
+            }, 800);
+        </script>
+    {% endif %}
+
+</body>
+</html>

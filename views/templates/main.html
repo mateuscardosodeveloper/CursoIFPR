@@ -13,7 +13,7 @@
     {% block header %}
         <div id="area-cabecalho">
             <div id="area-logo">
-                <a href="main.html"><img id="iflogo" src="../images/logo.png" alt=""></a>
+                <a href="/"><img id="iflogo" src="../images/logo.png" alt=""></a>
 
             </div>
         </div>
@@ -55,7 +55,7 @@
                     </form>
                 </div>
                 <div class="baixo">
-                    <p class="espaco">Não possui uma conta? <a href="register.html">Registre-se aqui!</a><br>
+                    <p class="espaco">Não possui uma conta? <a href="/register">Registre-se aqui!</a><br>
                         <a href="">Esqueci o usuário</a><br>
                         <a href="">Esqueci a senha</a>
                     </p>
@@ -65,24 +65,14 @@
             <div id="recent-post">
                 <p>Atividades postadas recentemente</p>
                 <div id="main-recent">
-                    <div id="container-recent">
-                        <div class="recent">
-                            <div class="recent-title">titulo</div>
-                            <div class="recent-description">descrição</div>
-                        </div>
-                        <div class="recent">
-                            <div class="recent-title">titulo</div>
-                            <div class="recent-description">descrição</div>
-                        </div>
-                        <div class="recent">
-                            <div class="recent-title">titulo</div>
-                            <div class="recent-description">descrição</div>
-                        </div>
-                        <div class="recent">
-                            <div class="recent-title">titulo</div>
-                            <div class="recent-description">descrição</div>
-                        </div>
-                    </div>
+
+                        {% for homework in homeworks %}
+                            <div class="recent">
+                                <div class="recent-title"> {{ homework.classroom_name }} - {{ homework.subject_name}} </div>
+                                <div class="recent-description"> {{homework.description}} </div>
+                            </div>
+                        {% endfor %}
+
                 </div>
             </div>
         </div>

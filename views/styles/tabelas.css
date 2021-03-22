@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: 0 auto;
+}
+button{
+    width: 180px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #04D361;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+form{
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+    text-align: center;
+
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    margin: 10px;
+    border: none;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    height: 25px;
+    padding: 5px;
+    width: 70%;
+}
+
+select, textarea{
+    width: 72%;
+    border: none;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+}
+
+h2{
+    font-family: Nunito;
+}
+
+#users{
+    border: 3px solid red;
+}
+
+#done-homeworks{
+    border: 3px solid black;
+}
+
+#classrooms{
+    border: 3px solid teal;
+}
+
+#homeworks{
+    border: 3px solid gold;
+}
+
+#subjects{
+    border: 3px solid greenyellow;
+}

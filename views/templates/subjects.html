@@ -41,15 +41,18 @@
                 <a href="/conceitos"><button>Conceitos</button></a>
             </div>
             <div id="quadrado">
-                <div class="select">
+                <form class="select">
                     <p>Classificar por:</p>
-                    <select name="" id="">
-                        <option value="">Matemática</option>
-                        <option value="">Português</option>
-                        <option value="">Geografia</option>
-                        <option value="">Ciências</option>
+                    <select name="filter" id="">
+
+                        {% for subject in subjects %}
+                            <option value="{{subject.subject_id}}"> {{subject.subject_name}} </option>
+                        {% endfor %}
+
                     </select>
-                </div>
+
+                    <button type="submit" id="filter">Filtrar</button>
+                </form>
                 <div class="scroll">
                     <div id="linha-0" class="linha">
                         <div class="conteudo">

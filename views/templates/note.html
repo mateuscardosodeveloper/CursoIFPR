@@ -40,15 +40,16 @@
                 <a href="/conceitos"><button class="roxo">Conceitos</button></a>
             </div>
             <div id="quadrado">
-                <div class="select">
+                <form class="select">
                     <p>Classificar por:</p>
-                    <select name="" id="">
-                        <option value="">Matemática</option>
-                        <option value="">História</option>
-                        <option value="">Gegrafia</option>
-                        <option value="">Inglês</option>
+                    <select name="filter" id="">
+                        {% for subject in subjects %}
+                            <option value="{{subject.subject_id}}"> {{subject.subject_name}} </option>
+                        {% endfor %}
                     </select>
-                </div>
+
+                    <button type="submit" id="filter">Filtrar</button>
+                </form>
                 <div class="scroll">
                     <div id="pdf-0" class="pdf">
                         <h2 id="bloco-0">Bloco I</h2>

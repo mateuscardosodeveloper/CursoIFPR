@@ -23,6 +23,7 @@ const homeworkRoute = require('./routes/homework')
 const videosRoute = require('./routes/videos')
 const subjectsRoute = require('./routes/subjects')
 const noteRoute = require('./routes/note')
+const dbRoute = require('./routes/database')
 
 app.use('/', loginRoute)
 app.use('/register', registerRoute)
@@ -30,6 +31,7 @@ app.use('/tarefas', homeworkRoute)
 app.use('/videos', videosRoute)
 app.use('/materias', subjectsRoute)
 app.use('/conceitos', noteRoute)
+app.use('/database', dbRoute)
 
 
 
