@@ -1,3 +1,9 @@
+#uploads
+*.jpg
+*.pdf
+*.png
+*.docx
+
 # Logs
 logs
 *.log
