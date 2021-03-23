@@ -24,9 +24,9 @@
                     <a href=""><img src="../images/boletim.png" alt=""> Boletim</a>
                 </div>
                 <div id="perfil">
-                    <span id="nome" class="branco">Gustavo Borges</span><span class="branco"> | </span><span id="turma"
-                        class="branco">4° Mecatrônica</span>
-                    <img src="../images/registerfoto.png" alt="">
+                    <span id="nome" class="branco">{{user.user_name}}</span><span class="branco"> | </span><span id="turma"
+                        class="branco">{{user.user_classroom}}</span>
+                    <img src="../uploads/{{ user.user_image }}" alt="">
                 </div>
             </div>
         </div>
@@ -68,10 +68,10 @@
                             <p>Situação: <span id="situation">Não entregue</span></p>
                         </div>
                         <div id="file">
-                            <form action="">
+                            <form action="/tarefas/{{ homework.homework_id }}" method="POST" enctype="multipart/form-data"">
                                 <div id="borda">
                                     <label for="homework" class="send-archive">+ Adicionar Arquivo</label>
-                                    <input id='homework' class="homework" type='file' onchange="loadFile(event)">
+                                    <input id='homework' class="homework" name="homework" type='file' onchange="loadFile(event)">
                                 </div>
 
                                 <input type="submit" name="send-file" id="send-file" class="botao"

@@ -1,6 +1,7 @@
 const express = require('express')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const nunjucks = require('nunjucks')
 const router = express.Router()
 
@@ -11,6 +12,7 @@ app.use(express.static('views'))
 app.engine('html', ejs.renderFile)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
+app.use(cookieParser())
 
 nunjucks.configure('views', {
     express: app,

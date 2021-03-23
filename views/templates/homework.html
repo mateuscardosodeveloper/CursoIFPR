@@ -24,8 +24,8 @@
                     <a href=""><img src="../images/boletim.png" alt=""> Boletim</a>
                 </div>
                 <div id="perfil">
-                    <span id="nome" class="branco">Gustavo Borges </span>|<span class="branco"></span><span class="branco" id="turma"> 4° Mecatrônica </span>
-                    <img src="../images/registerfoto.png" alt="">
+                    <span id="nome" class="branco">{{ user.user_name }} </span>|<span class="branco"></span><span class="branco" id="turma"> {{ user.user_classroom}} </span>
+                    <img src="../uploads/{{ user.user_image}}" alt="">
                 </div>
             </div>
         </div>
