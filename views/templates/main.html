@@ -65,14 +65,14 @@
             <div id="recent-post">
                 <p>Atividades postadas recentemente</p>
                 <div id="main-recent">
-
+                    <div id="container-recent">
                         {% for homework in homeworks %}
                             <div class="recent">
                                 <div class="recent-title"> {{ homework.classroom_name }} - {{ homework.subject_name}} </div>
                                 <div class="recent-description"> {{homework.description}} </div>
                             </div>
                         {% endfor %}
-
+                    </div>      
                 </div>
             </div>
         </div>
