@@ -42,6 +42,21 @@ Desenvolvimento de um Website voltado para professores, objetivo é ajudar os pr
 
 **<h3> Imagens do projeto :framed_picture: </h3>**
 
+* home
+![!image](images/home.png)
+
+* Tela de registro
+![!image](images/register.png)
+
+Demais telas:
+
+| [Tela de tarefas](images/terefas.png) | [Tela de Videos](images/videos.png) | [Tela de materias](images/materias.png) |
+| --- | --- | --- |
+| ![Tela de tarefas](images/tarefas.png) | ![Tela de Videos](images/videos.png) | ![Tela de materias](images/materias.png)
+
+
+
+
 
 
  
